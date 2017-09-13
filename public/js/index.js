@@ -78,7 +78,7 @@ $(document).ready(function () {
         } else if (queryType == "Age") {
             brackets = AGE_BRACKETS;
             labels = AGE_LABELS;
-            plotTitle = "Age Distrubtion Across MA Counties";
+            plotTitle = "Age Distribution Across MA Counties";
             x_axis_label = "Age";
         }
 

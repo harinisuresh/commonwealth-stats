@@ -24,7 +24,7 @@
     "chance": "^1.0.4",
     "cookie-parser": "^1.4.3",
     "cookie-session": "^2.0.0-alpha.1",
-    "debug": "^2.2.0",
+    "debug": "^2.6.9",
     "morgan": "~1.7.0",
     "path": "^0.12.7"
   }

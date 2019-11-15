@@ -1,5 +1,5 @@
 var STATE_FIP = "25";
-var BASE_URL = "https://api.census.gov/data/2015/acs1";
+var BASE_URL = "https://api.census.gov/data/2015/acs/acs1";
 
 var COUNTY_FIPS = {
     "barnstable": "001",
@@ -60,9 +60,6 @@ $(document).ready(function () {
         var plotTitle = "";
         var x_axis_label = "";
         var y_axis_append = "";
-
-        console.log("here");
-        console.log(queryType);
 
         if (queryType == "Income") {
             brackets = INCOME_BRACKETS;
@@ -128,7 +125,6 @@ $(document).ready(function () {
                         var vals = resp[i].slice(1,-2);
                         var sum = vals.reduce(getSum)
                         var percentages = vals.map(function(x) {return x*1.0/sum});
-                        console.log(percentages);
                         y_vals.push(percentages)
                         names.push(resp[i][0].split(',')[0]);
                     }
@@ -173,9 +169,6 @@ $(document).ready(function () {
                         names.push('Entire State');
                     }});
                 }
-
-                console.log(y_vals);
-
 
                 if (queryType == "Age") {
                     var new_y_vals = []
